@@ -1,24 +1,12 @@
-import styled from 'styled-components/native'
+import MainNavigator from '@navigation/MainNavigator'
+import { AuthProvider } from '@contexts/AuthProvider'
 
-import { StatusBar } from 'expo-status-bar'
-
-const Container = styled.View`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5fcff;
-`
-
-const Text = styled.Text`
-  font-size: 20px;
-  color: #333;
-`
-
-export default function App() {
+const App = () => {
   return (
-    <Container>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </Container>
+    <AuthProvider>
+      <MainNavigator />
+    </AuthProvider>
   )
 }
+
+export default App
