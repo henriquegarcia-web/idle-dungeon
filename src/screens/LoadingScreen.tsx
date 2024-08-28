@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 
 import { useAuth } from '@contexts/AuthProvider'
 
-export const SignInScreenWrapper = styled.View`
+const LoadingScreenWrapper = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -12,22 +12,22 @@ export const Button = styled.Button`
   font-size: 15px;
 `
 
-interface ISignInScreen {
+interface ILoadingScreen {
   navigation: any
 }
 
-const SignInScreen = ({ navigation }: ISignInScreen) => {
+const LoadingScreen = ({ navigation }: ILoadingScreen) => {
   const { handleLogin } = useAuth()
 
   return (
-    <SignInScreenWrapper>
+    <LoadingScreenWrapper>
       <Button
         title="Go to Sign Up"
         onPress={() => navigation.navigate('SignUp')}
       />
       <Button title="Entrar" onPress={handleLogin} />
-    </SignInScreenWrapper>
+    </LoadingScreenWrapper>
   )
 }
 
-export default SignInScreen
+export default LoadingScreen
