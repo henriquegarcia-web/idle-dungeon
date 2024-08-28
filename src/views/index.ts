@@ -1,5 +1,5 @@
-import HomeView from './HomeView'
-import InventoryView from './InventoryView'
-import ShopView from './ShopView'
+import HomeView from './Home'
+import InventoryView from './Inventory'
+import ShopView from './Shop'
 
 export { HomeView, InventoryView, ShopView }

@@ -13,7 +13,7 @@ export const AuthContext = createContext<IAuthContextData>(
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   // ========================================================================
 
-  const [userIsLoggedIn, setUserIsLoggedIn] = useState<boolean>(false)
+  const [userIsLoggedIn, setUserIsLoggedIn] = useState<boolean>(true)
 
   // ========================================================================
 

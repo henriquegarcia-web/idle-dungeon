@@ -14,7 +14,7 @@ export default function MainNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Auth"
+        initialRouteName="Game"
         screenOptions={{ headerShown: false }}
       >
         {userIsLoggedIn ? (
