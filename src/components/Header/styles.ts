@@ -1,11 +1,14 @@
 import styled from 'styled-components/native'
+import { Colors } from '@utils/styles/colors'
+import { Sizes } from '@utils/styles/sizes'
 
 export const HeaderContainer = styled.View`
-  height: 60px;
-  background-color: #6200ee;
+  height: ${Sizes.gameHeaderHeight};
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: ${Sizes.phoneTopMargin} 10px 0 10px;
+
+  background-color: ${Colors.backgroundSecondary};
 `
 
 export const HeaderText = styled.Text`

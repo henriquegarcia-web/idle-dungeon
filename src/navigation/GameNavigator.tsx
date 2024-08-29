@@ -1,38 +1,86 @@
+import styled from 'styled-components/native'
+import { Colors } from '@utils/styles/colors'
+
+import { Image, Platform } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import Header from '@components/Header'
+import inventoryIcon from 'assets/icons/swap-bag.png'
+import dungeonIcon from 'assets/icons/dungeon-gate.png'
+import shopIcon from 'assets/icons/shop.png'
 
-import { HomeView, InventoryView, ShopView } from '@views/index'
+import Header from '@components/Header'
+import { DungeonView, InventoryView, ShopView } from '@views/index'
+
+export const GameNavigatorScreen = styled.View`
+  flex: 1;
+  background-color: ${Colors.backgroundSecondary};
+`
 
 const Tab = createBottomTabNavigator()
 
-export default function GameNavigator() {
+const GameNavigator = () => {
   return (
-    <>
+    <GameNavigatorScreen>
       <Header />
       <Tab.Navigator
+        initialRouteName="Inventory"
         screenOptions={{
           headerShown: false,
-          tabBarActiveTintColor: '#2f95dc',
-          tabBarInactiveTintColor: '#8e8e93'
+          tabBarActiveTintColor: '#22a21b',
+          tabBarInactiveTintColor: '#8e8e93',
+          tabBarStyle: {
+            backgroundColor: `#17222d`,
+            borderTopColor: 'black',
+            height: 76,
+            paddingTop: 10,
+            paddingBottom: 10,
+            borderWidth: 0
+          },
+          tabBarLabelStyle: {
+            fontSize: 14,
+            fontWeight: 'bold'
+          }
         }}
       >
         <Tab.Screen
-          name="Home"
-          component={HomeView}
-          options={{ title: 'Home' }}
-        />
-        <Tab.Screen
           name="Inventory"
           component={InventoryView}
-          options={{ title: 'Inventory' }}
+          options={{
+            title: 'Mochila',
+            tabBarIcon: ({ color, size }) => (
+              <Image
+                source={inventoryIcon}
+                style={{ width: size, height: size }}
+              />
+            )
+          }}
+        />
+        <Tab.Screen
+          name="Dungeon"
+          component={DungeonView}
+          options={{
+            title: 'Dungeon',
+            tabBarIcon: ({ color, size }) => (
+              <Image
+                source={dungeonIcon}
+                style={{ width: size, height: size }}
+              />
+            )
+          }}
         />
         <Tab.Screen
           name="Shop"
           component={ShopView}
-          options={{ title: 'Shop' }}
+          options={{
+            title: 'Loja',
+            tabBarIcon: ({ color, size }) => (
+              <Image source={shopIcon} style={{ width: size, height: size }} />
+            )
+          }}
         />
       </Tab.Navigator>
-    </>
+    </GameNavigatorScreen>
   )
 }
+
+export default GameNavigator

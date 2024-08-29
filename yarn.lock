@@ -1241,7 +1241,7 @@
   dependencies:
     cross-spawn "^7.0.3"
 
-"@expo/vector-icons@^14.0.0":
+"@expo/vector-icons@^14.0.0", "@expo/vector-icons@^14.0.2":
   version "14.0.2"
   resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-14.0.2.tgz#f7f6c4cb5ef356d1171d2b4e059217556738fd3b"
   integrity sha512-70LpmXQu4xa8cMxjp1fydgRPsalefnHaXLzIwaHMEzcZhnyjw2acZz8azRrZOslPVAWlxItOa2Dd7WtD/kI+CA==
@@ -6397,6 +6397,11 @@ react-freeze@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/react-freeze/-/react-freeze-1.0.4.tgz#cbbea2762b0368b05cbe407ddc9d518c57c6f3ad"
   integrity sha512-r4F0Sec0BLxWicc7HEyo2x3/2icUTrRmDjaaRyzzn+7aDyFZliszMDOgLVwSnQnYENOlL1o569Ze2HZefk8clA==
+
+react-icons@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.3.0.tgz#ccad07a30aebd40a89f8cfa7d82e466019203f1c"
+  integrity sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==
 
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", react-is@^18.0.0:
   version "18.3.1"

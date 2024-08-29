@@ -1,5 +1,5 @@
-import HomeView from './Home'
+import DungeonView from './DungeonView'
 import InventoryView from './Inventory'
 import ShopView from './Shop'
 
-export { HomeView, InventoryView, ShopView }
+export { DungeonView, InventoryView, ShopView }
