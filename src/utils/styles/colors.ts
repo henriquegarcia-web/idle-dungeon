@@ -11,9 +11,10 @@ export const Colors = {
   backgroundSecondary: '#17222d',
 
   textPrimary: '#ffffff',
-  textSecondary: '#0f171e',
+  textSecondary: 'rgb(120, 120, 120)',
+  textTertiary: '#0f171e',
 
-  borderPrimary: '#17222d',
+  borderPrimary: 'rgba(255, 255, 255, 0.1)',
   borderSecondary: '#b0b0b0',
 
   colorSuccess: '#28a745',
