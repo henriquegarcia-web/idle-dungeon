@@ -4,9 +4,12 @@ import { Colors } from '@utils/styles/colors'
 import { Image, Platform } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import inventoryIcon from 'assets/icons/swap-bag.png'
-import dungeonIcon from 'assets/icons/dungeon-gate.png'
+import inventoryIcon from 'assets/icons/inventory.png'
+import dungeonIcon from 'assets/icons/dungeon.png'
 import shopIcon from 'assets/icons/shop.png'
+import servicesIcon from 'assets/icons/services.png'
+import mapIcon from 'assets/icons/map.png'
+import rankingIcon from 'assets/icons/ranking.png'
 
 import Header from '@components/Header'
 import { DungeonView, InventoryView, ShopView } from '@views/index'
@@ -43,10 +46,23 @@ const GameNavigator = () => {
         }}
       >
         <Tab.Screen
+          name="Services"
+          component={InventoryView}
+          options={{
+            title: 'Serviços',
+            tabBarIcon: ({ color, size }) => (
+              <Image
+                source={servicesIcon}
+                style={{ width: size, height: size }}
+              />
+            )
+          }}
+        />
+        <Tab.Screen
           name="Inventory"
           component={InventoryView}
           options={{
-            title: 'Mochila',
+            title: 'Personagem',
             tabBarIcon: ({ color, size }) => (
               <Image
                 source={inventoryIcon}
@@ -69,12 +85,35 @@ const GameNavigator = () => {
           }}
         />
         <Tab.Screen
+          name="Map"
+          component={ShopView}
+          options={{
+            title: 'Mapa',
+            tabBarIcon: ({ color, size }) => (
+              <Image source={mapIcon} style={{ width: size, height: size }} />
+            )
+          }}
+        />
+        <Tab.Screen
           name="Shop"
           component={ShopView}
           options={{
             title: 'Loja',
             tabBarIcon: ({ color, size }) => (
               <Image source={shopIcon} style={{ width: size, height: size }} />
+            )
+          }}
+        />
+        <Tab.Screen
+          name="Ranking"
+          component={ShopView}
+          options={{
+            title: 'Ranking',
+            tabBarIcon: ({ color, size }) => (
+              <Image
+                source={rankingIcon}
+                style={{ width: size, height: size }}
+              />
             )
           }}
         />
