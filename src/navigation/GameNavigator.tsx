@@ -35,6 +35,7 @@ const GameNavigator = () => {
         {gameScreens.map((menuOption: IGameScreen) => {
           return (
             <Tab.Screen
+              key={menuOption.screenName}
               name={menuOption.screenName}
               component={menuOption.screenComponent}
               options={{

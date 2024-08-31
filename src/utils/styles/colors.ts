@@ -14,6 +14,8 @@ export const Colors = {
   textSecondary: 'rgb(120, 120, 120)',
   textTertiary: '#0f171e',
 
+  slot: 'rgba(255, 255, 255, 0.015)',
+
   borderPrimary: 'rgba(255, 255, 255, 0.1)',
   borderSecondary: '#b0b0b0',
 
